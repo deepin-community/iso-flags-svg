@@ -1,0 +1,37 @@
+Source: iso-flags-svg
+Section: misc
+Priority: optional
+Maintainer: Debian Cinnamon Team <debian-cinnamon@lists.debian.org>
+Uploaders:
+ Maximiliano Curia <maxy@debian.org>,
+ Margarita Manterola <marga@debian.org>,
+Build-Depends:
+ debhelper (>= 11~),
+ imagemagick,
+ libjson-perl,
+ librsvg2-bin,
+ libxml-libxml-perl,
+Standards-Version: 4.1.4
+Homepage: https://github.com/joielechong/iso-country-flags-svg-collection
+Vcs-Browser: https://salsa.debian.org/cinnamon-team/iso-flags-svg
+Vcs-Git: https://salsa.debian.org/cinnamon-team/iso-flags-svg.git
+
+Package: iso-flags-png-320x240
+Architecture: all
+Depends: ${misc:Depends}
+Provides: iso-flag-png
+Description: ISO country flags in PNG format (320x240)
+ A 4x3 country flag collection in PNG format in the resolution 320x240.
+ Generated from the high quality vector graphics country flag icons (shipped in
+ the iso-flags-svg package).
+ .
+ It contains more than 240 country flag icons.
+
+Package: iso-flags-svg
+Architecture: all
+Depends: ${misc:Depends}
+Description: ISO country flags in SVG format
+ High quality vector graphics country flag icons.
+ .
+ It contains more than 240 country flag icons in a squared and in a 4x3 aspect
+ ratio.

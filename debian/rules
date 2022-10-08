@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+%:
+	dh ${@}
+
+override_dh_auto_build:
+	make png-country-320x240-fancy
+
+override_dh_install:
+	# iso-flags-png-320x240
+	mkdir -p debian/iso-flags-png-320x240/usr/share/iso-flags-png-320x240
+	cp -r build/png-country-4x2-fancy/res-320x240/. \
+	    debian/iso-flags-png-320x240/usr/share/iso-flags-png-320x240
+	# iso-flags-svg
+	mkdir -p debian/iso-flags-svg/usr/share/iso-flags-svg
+	cp -r svg/. debian/iso-flags-svg/usr/share/iso-flags-svg
